@@ -1,0 +1,26 @@
+[package]
+name = "messaging-proto"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+[dependencies]
+tokio = { version = "1.28", features = ["full"]}
+ed25519-dalek = "1.0"
+x25519-dalek = "1.0"
+rand = "0.7"
+hex = "0.4"
+thiserror = "1.0"
+anyhow = "1.0"
+colored = "2.0"
+
+# log 
+log = "0.4"
